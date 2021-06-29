@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 1 20%;
+    margin: 0px auto;
+    width: 262px;
+    height: 52px;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    opacity: 0.6;
+    background-color: rgb(201, 204, 204);
+}
+
+.logoImg {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.logoText {
+    opacity: 1;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;    
+    color: #EAECE8;
+}
