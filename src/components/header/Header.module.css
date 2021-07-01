@@ -13,9 +13,9 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    border-radius: 15px;
-    opacity: 0.6;
-    background-color: rgb(201, 204, 204);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
 }
 
 .logoImg {
@@ -26,10 +26,15 @@
 
 .logoText {
     opacity: 1;
-    font-family: Poppins;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
     line-height: 32px;    
     color: #EAECE8;
+    font-weight: 100;
+}
+
+.logoText span {
+    font-weight: 700;
 }

@@ -7,7 +7,7 @@ export const Header = () => {
         <header className={style.header}>
             <div className={style.logo}>
                 <img className={style.logoImg} src={logo} alt="logo" />
-                <p className={style.logoText}>PLNT: Plant & Tree Idenifier </p>
+                <p className={style.logoText}><span>PLNT:</span> Plant & Tree Idenifier </p>
             </div>
         </header>
     )

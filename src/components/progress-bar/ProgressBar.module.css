@@ -1,0 +1,17 @@
+.indexedStep {
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    background-color: #273210;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+  }
+  
+.indexedStep.accomplished {
+    background-color: #BBD780;
+    opacity: 1;
+}
