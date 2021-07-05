@@ -3,15 +3,7 @@ import { Header } from '../header/Header';
 import { NavLink } from "react-router-dom";
 import { ProgressBarLine } from '../progress-bar/ProgressBar'; 
 import style from './QuestionsPage.module.css';
-
-const json = {
-    "questionsTitleArr": ['Choose the option that best describes you:', 'Do you have any plants at home?', 'What PLNT features will you find most useful?'],
-    "answersArr": [
-        ['I’m a nature lover', 'I’m planning to become a gardener', 'I am a garden expert', 'Other'],
-        ['Yes, a lot of', 'Not yet. But I am planning to grow some', 'No, I don’t want to', 'Other'],
-        ['Plant identification', 'Growing and plant care tips', 'Smart reminders and notes', 'Other']
-    ]
-};
+import { json } from '../../json';
 
 const initialState = {
     questionNumber: 2,
@@ -37,7 +29,7 @@ export const QuestionsPage = () => {
     const [answerResults, setAnswerResults] = useState([]);
     const [step, setStep] = useState(Math.floor(100 / (questionsTitleArr.length + 1) - 1));
 
-    const setLink = () => state.questionNumber === 4 ? '/' : `/questions/${state.questionNumber}`;
+    const setLink = () => state.questionNumber === 4 ? '/download' : `/questions/${state.questionNumber}`;
 
     const showNextQuestion = () => {
         if (state.questionNumber + 1 < questionsTitleArr.length + 2) 
