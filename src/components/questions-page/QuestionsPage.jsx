@@ -6,15 +6,15 @@ import style from './QuestionsPage.module.css';
 import { json } from '../../json';
 
 const initialState = {
-    questionNumber: 2,
+    questionNumber: 1,
 }
 
 const reducer = (state, action) => {
     switch (action.type) {
         case 'NEXT_QUESTION':
-            return {questionNumber: action.questionNumber};
+            return {questionNumber: state.questionNumber + 1};
         case 'PREV_QUESTION':
-            return {questionNumber: action.questionNumber};
+            return {questionNumber: state.questionNumber - 1};
         default:
             return state;
     }
@@ -29,23 +29,25 @@ export const QuestionsPage = () => {
     const [answerResults, setAnswerResults] = useState([]);
     const [step, setStep] = useState(Math.floor(100 / (questionsTitleArr.length + 1) - 1));
 
-    const setLink = () => state.questionNumber === 4 ? '/download' : `/questions/${state.questionNumber}`;
+    const setNextLink = () => state.questionNumber === 3 ? '/download' : `/questions/${state.questionNumber + 1}`;
+
+    const setPrevLink = () => state.questionNumber === 1 ? '/' : `/questions/${state.questionNumber - 1}`;
 
     const showNextQuestion = () => {
-        if (state.questionNumber + 1 < questionsTitleArr.length + 2) 
-            dispatch({type: 'NEXT_QUESTION', questionNumber: state.questionNumber + 1});
+        if (state.questionNumber + 1 < questionsTitleArr.length + 1) 
+            dispatch({type: 'NEXT_QUESTION'});
     }
 
     const saveTestResults = (e) => {
         const currentAnswers = answerResults.concat(e.target.innerText);
         setAnswerResults(currentAnswers);
-        setStep(Math.floor(100 * state.questionNumber / (questionsTitleArr.length + 1) - 1));
+        setStep(Math.floor(100 * (state.questionNumber + 1) / (questionsTitleArr.length + 1) - 1));
         showNextQuestion();
     }
 
     const showPrevQuestion = () => {
-        if (state.questionNumber - 1 >= 2) 
-        dispatch({type: 'PREV_QUESTION', questionNumber: state.questionNumber - 1});
+        if (state.questionNumber - 1 >= 1) 
+        dispatch({type: 'PREV_QUESTION'});
     }
     
     return (
@@ -57,12 +59,12 @@ export const QuestionsPage = () => {
                     step={step}
                 />
                 <div className={style.questionsField__questions}>
-                    <h2 className={style.questionsField__questionsTitle}>{questionsTitleArr[state.questionNumber - 2]}</h2>
+                    <h2 className={style.questionsField__questionsTitle}>{questionsTitleArr[state.questionNumber - 1]}</h2>
                     <ul className={style.questionsField__questionsList}>
                         {
-                            answersArr[state.questionNumber - 2].map((answer, index) => {
+                            answersArr[state.questionNumber - 1].map((answer, index) => {
                                 return (
-                                    <NavLink to={setLink()} key={style.questionsField__questionsAnwer + index}>
+                                    <NavLink to={setNextLink()} key={style.questionsField__questionsAnwer + index}>
                                         <li key={style.questionsField__questionsAnwer + index} className={style.questionsField__questionsAnwer} onClick={(e) => saveTestResults(e)}>
                                             {answer}
                                         </li>
@@ -73,10 +75,10 @@ export const QuestionsPage = () => {
                     </ul>
                 </div>
                 <div className={style.questionsField__buttons}>
-                    <NavLink to={`/questions/${state.questionNumber - 1}`}>
+                    <NavLink to={setPrevLink()}>
                         <button className={style.questionsField__buttonsBack} onClick={() => showPrevQuestion()}>Back</button>
                     </NavLink>
-                    <NavLink to={setLink()}>
+                    <NavLink to={setNextLink()}>
                         <button className={style.questionsField__buttonsNext} onClick={() => showNextQuestion()}>Next</button>
                     </NavLink>
                 </div>

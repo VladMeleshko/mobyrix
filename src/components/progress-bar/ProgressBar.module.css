@@ -12,6 +12,19 @@
   }
   
 .indexedStep.accomplished {
+    color: #273210;
     background-color: #BBD780;
     opacity: 1;
 }
+
+.indexedStep.accomplishedFinalPAge, .indexedStep.unaccomplished {
+  color: #273210;
+  background-color: #EAECE8;
+  opacity: 1;
+}
+
+/* .indexedStep.unaccomplished {
+  color: #273210;
+  background-color: #EAECE8;
+  opacity: 1;
+} */

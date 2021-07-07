@@ -280,10 +280,18 @@ a {
 
 @media (max-width: 376px) {
     .downloadAppPage {
-        height: 100%;
+        min-height: 100%;
+    }
+
+    .downloadAppPage__commentsCarousel {
+        height: 25%;
     }
 
     .commentsCarousel__comment {
         width: 95%;
+    }
+
+    .downloadAppPage__downloadAndInfoLinks {
+        margin-bottom: 0;
     }
 }

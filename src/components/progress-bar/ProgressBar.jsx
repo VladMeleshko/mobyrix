@@ -23,7 +23,7 @@ export const ProgressBarLine = (props) => {
                         <Step key={`question-${index}`}>
                             {({ accomplished, index }) => (
                             <div
-                                className={`${style.indexedStep} ${accomplished ? style.accomplished : null}`}
+                                className={`${style.indexedStep} ${accomplished ? style.accomplished : null} ${(step === (100 / (questionTitles.length + 1) * (index)) - 1) ? style.unaccomplished : null}`}
                             >
                                 {accomplished ? '✓' : index}
                             </div>
@@ -35,7 +35,7 @@ export const ProgressBarLine = (props) => {
             <Step>
                 {({ accomplished }) => (
                 <div
-                    className={`${style.indexedStep} ${accomplished ? style.accomplished : null}`}
+                    className={`${style.indexedStep} ${accomplished ? style.accomplishedFinalPAge : null}`}
                 >
                     {questionTitles.length + 1}
                 </div>

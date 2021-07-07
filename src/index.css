@@ -12,7 +12,15 @@ code {
     monospace;
 }
 
-/* .carousel.carousel-slider .control-arrow {
+.carousel-root {
+  height: 100%;
+}
+
+.carousel.carousel-slider {
+  height: 100%;
+}
+
+.carousel.carousel-slider .control-arrow {
   width: 43px;
   height: 43px;
   background: rgba(234, 236, 232, 0.1) !important;
@@ -28,7 +36,14 @@ code {
 
 @media (max-width: 376px) {
   .carousel.carousel-slider .control-arrow {
-    position: absolute;
-    left: 0;
+    top: 50% !important;
   }
-} */
+
+  .control-arrow.control-prev {
+    left: 35% !important;
+  }
+
+  .control-arrow.control-next {
+    right: 35% !important;
+  }
+}
