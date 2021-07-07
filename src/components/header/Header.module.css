@@ -38,3 +38,14 @@
 .logoText span {
     font-weight: 700;
 }
+
+@media (max-width: 376px) {
+    .header {
+        flex: 0 1 16%;
+    }
+
+    .logo {
+        background: none;
+        backdrop-filter: none;
+    }
+}

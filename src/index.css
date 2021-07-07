@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .carousel.carousel-slider .control-arrow {
+  width: 43px;
+  height: 43px;
+  background: rgba(234, 236, 232, 0.1) !important;
+  backdrop-filter: blur(24px) !important;
+  border-radius: 25px;
+  transform: translateY(150%);
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  color: #000;
+  background: #F1F7E6; 
+}
+
+@media (max-width: 376px) {
+  .carousel.carousel-slider .control-arrow {
+    position: absolute;
+    left: 0;
+  }
+} */
