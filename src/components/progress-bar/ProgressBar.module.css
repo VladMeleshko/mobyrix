@@ -1,13 +1,13 @@
 .indexedStep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     width: 20px;
     height: 20px;
     font-size: 12px;
     background-color: #273210;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     opacity: 0.6;
   }
   
@@ -22,9 +22,3 @@
   background-color: #EAECE8;
   opacity: 1;
 }
-
-/* .indexedStep.unaccomplished {
-  color: #273210;
-  background-color: #EAECE8;
-  opacity: 1;
-} */

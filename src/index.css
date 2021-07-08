@@ -36,7 +36,7 @@ code {
 
 @media (max-width: 376px) {
   .carousel.carousel-slider .control-arrow {
-    top: 50% !important;
+    top: 55% !important;
   }
 
   .control-arrow.control-prev {
@@ -45,5 +45,11 @@ code {
 
   .control-arrow.control-next {
     right: 35% !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .carousel.carousel-slider .control-arrow {
+    display: none;
   }
 }
