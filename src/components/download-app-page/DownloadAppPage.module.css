@@ -1,0 +1,309 @@
+.downloadAppPage {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/desktop/download-app-page/Image.png') center no-repeat fixed;
+}
+
+.downloadAppPage__info {
+    position: relative;
+    width: 545px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.downloadAppPage__infoTitle {
+    margin: 38px 0 26px 0;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 41px;
+    color: #EAECE8;
+}
+
+.downloadAppPage__infoLinksList {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.infoLinksList__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    margin: 9px 0;
+}
+
+.infoLinksList__linkImg {
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+}
+
+.infoLinksList__linkText {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #EAECE8;
+    text-decoration: none;
+}
+
+.downloadAppPage__commentsCarousel {
+    position: relative;
+    width: 90%;
+    margin: 51px auto;
+}
+
+li {
+    list-style: none;
+}
+
+.commentsCarousel__comment {
+    position: relative;
+    width: 350px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(244, 245, 246, 0.1);
+    box-sizing: border-box;
+    backdrop-filter: blur(24px);
+    border-radius: 16px;
+}
+
+.author__starMark {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.starMark__star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .9em;
+    margin-right: .9em;
+    margin-bottom: 1.2em;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+    font-size: 13px;
+}
+    
+.starMark__star:before, .starMark__star:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: .6em;
+    left: -1em;
+    border-right:  1em solid transparent;
+    border-left:   1em solid transparent;
+    transform: rotate(-35deg);
+}
+
+.starMark__star:after {  
+    transform: rotate(35deg);
+}
+
+.marked, .marked:before, .marked:after {
+    border-bottom: .7em  solid #FFBD00;
+}
+
+.unmarked, .unmarked:before, .unmarked:after {
+    border-bottom: .7em  solid #fff;
+}
+
+.carousel.carousel-slider .control-arrow {
+    background: rgba(234, 236, 232, 0.1) !important;
+    backdrop-filter: blur(24px) !important;
+    border-radius: 25px !important;
+}
+
+.author__comment {
+    margin: 17px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #EAECE8;
+    text-align: left;
+}
+
+.author__info {
+    display: flex;
+    align-self: flex-start;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+}
+
+.author__photo {
+    margin-right: 8px;
+    width: 24px !important;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.author__name {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #EAECE8;
+}
+
+.downloadAppPage__downloadAndInfoLinks {
+    margin-bottom: 118px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.downloadAndInfoLinks__downloadButton {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    background: #77AF00;
+    border-radius: 90px;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #EAECE8;
+    cursor: pointer;
+}
+
+.downloadAndInfoLinks__InfoLinks {
+    margin-top: 60px;
+    position: relative;
+    margin: 20px 0 0 0;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+hr {
+    margin: 0;
+    width: 0px;
+    height: 12px;
+    border: 1px solid #77AF00;
+    transform: translateY(25%);
+}
+
+.InfoLinks__teamInfo, .InfoLinks__policyInfo {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    color: #EAECE8;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 1350px) {
+    .downloadAppPage {
+        background-size: 100%;
+    }
+}
+
+@media (min-height: 1023px) and (max-width: 1025px) {
+    .downloadAppPage {
+        background: url('../../img/middle-screen/download-app-page/Image.png') center/180% no-repeat fixed !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    .downloadAppPage {
+        background: url('../../img/middle-screen/download-app-page/Image.png') center no-repeat fixed;
+    }
+
+    .downloadAppPage__downloadAndInfoLinks {
+        margin-bottom: 95px;
+    }
+}
+
+@media (max-height: 850px) and (min-width: 300px) {
+    .downloadAppPage {
+        min-height: 950px;
+    }
+}
+
+@media (max-height: 600px) and (min-width: 300px) {
+    .downloadAppPage {
+        min-height: 895px;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 250px) {
+    .downloadAppPage {
+        min-height: 895px;
+    }
+}
+
+@media (max-width: 769px) {
+    .downloadAppPage__info {
+        width: 80%;
+    }
+
+    .downloadAppPage__commentsCarousel {
+        margin: 20px auto;
+    }
+
+    .commentsCarousel__comment {
+        width: 80%;
+    }
+
+    .downloadAppPage__downloadAndInfoLinks {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 376px) {
+    .downloadAppPage {
+        background: url('../../img/mobile/download-app-page/Image.png') center no-repeat fixed;
+    }
+
+    .downloadAppPage__commentsCarousel {
+        height: 40%;
+    }
+
+    .commentsCarousel__comment {
+        width: 95%;
+    }
+
+    .downloadAppPage__downloadAndInfoLinks {
+        margin-bottom: 0;
+    }
+}

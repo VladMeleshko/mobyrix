@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+// import { Header } from './components/main-page/header/Header';
+import { MainInfo } from './components/main-page/MainInfo';
+import { QuestionsPage } from './components/questions-page/QuestionsPage';
+import { Fragment } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { DownloadAppPage } from './components/download-app-page/DownloadAppPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={MainInfo} />
+          <Route exact path='/questions/:questionNumber?' component={QuestionsPage} />
+          <Route exact path='/download' component={DownloadAppPage} />
+          <Route path='*' component={Error} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 }
 
