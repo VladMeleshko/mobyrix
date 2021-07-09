@@ -143,6 +143,6 @@
 
 @media (max-width: 376px) {
     .questionsPage {
-        background: url('../../img/mobile/questions/Image.png') center no-repeat fixed;
+        background: url('../../img/mobile/questions/Image.png') center/110% no-repeat fixed;
     }
 }

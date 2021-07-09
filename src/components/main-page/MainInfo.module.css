@@ -103,7 +103,7 @@
 
 @media (max-width: 376px) {
     .mainInfoPage {
-        background: url('../../img/mobile/main-page/Image.png') center no-repeat fixed;
+        background: url('../../img/mobile/main-page/Image.png') center/110% no-repeat fixed;
     }
 
     .mainInfo {

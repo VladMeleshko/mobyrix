@@ -33,13 +33,10 @@ export const DownloadAppPage = () => {
 
     const showComments = () => {
         if (window.screen.width >= 1200) {
-            console.log(33);
             return 33;
         } else if (window.screen.width < 1200 && window.screen.width > 768) {
-            console.log(33);
             return 50;
         } else if (window.screen.width <= 768) {
-            console.log(33);
             return 100;
         }
     }
